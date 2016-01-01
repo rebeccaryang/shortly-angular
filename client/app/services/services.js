@@ -6,28 +6,28 @@ angular.module('shortly.services', [])
   //   doSomething: function(){
   //     console.log("hello");
   //   }
-    var getAll = function(link){
+    var getAll = function (link) {
       return $http({
         method: 'GET',
         url: '/api/links',
         data: link
         // data: //toDo figure it out. Mongo stuff?
-      }).then(function (resp){
+      }).then(function (resp) {
         return resp.data;
       });
     };
 
-    var addOne = function(link){
+    var addOne = function (link) {
       return $http({
         method: 'POST',
         url: '/api/links',
         data: link
-      }).then(function (resp){
+      }).then(function (resp) {
         // console.log("Data")
         // console.log(resp.data)
         // resp.writeHead(201);
         return resp;
-      })
+      });
     };
     return {
       getAll: getAll,

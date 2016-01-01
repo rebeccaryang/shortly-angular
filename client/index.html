@@ -8,8 +8,27 @@
   <body>
     <h1>Shortly</h1>
 
-    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div ng-view></div>
+    <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
+    <div class="navigation">
+    <ul>
+    <li><a href="/#/links">Links</a></li>
+    <li><a href="/#/shorten">Shorten</a></li>
+    </ul>
+    </div>
+
+<!--     <div ng-show="currentView === 'links'">
+      Links are showing
+    </div>
+    <div ng-show="currentView === 'shorten'">
+      Shorten is showing
+    </div> -->
+
+    <!-- <div class="links" ng-show="currentView === 'links'"></div>
+    <div ng-show="show"></div>
+     -->
+    <div ng-view>
+      
+    </div>
 
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>

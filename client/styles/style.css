@@ -29,6 +29,7 @@ h1 {
 
 .navigation li {
   float: left;
+  margin: 10px;
 }
 
 .navigation li a {
