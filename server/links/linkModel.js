@@ -1,3 +1,4 @@
+// Does Q need to be required?
 var mongoose = require('mongoose');
 var crypto = require('crypto');
 
@@ -17,8 +18,10 @@ var createSha = function (url) {
 };
 
 LinkSchema.pre('save', function (next) {
+  // var link = this;
   var code = createSha(this.url);
   this.code = code;
+  
   next();
 });
 

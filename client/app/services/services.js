@@ -18,14 +18,17 @@ angular.module('shortly.services', [])
     };
 
     var addOne = function (link) {
+      console.log('AddOne being called with below link');
+      console.log(link);
+
       return $http({
         method: 'POST',
         url: '/api/links',
         data: link
       }).then(function (resp) {
         // console.log("Data")
-        // console.log(resp.data)
         // resp.writeHead(201);
+        console.log("Add one then being called")
         return resp;
       });
     };

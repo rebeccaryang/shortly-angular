@@ -6,6 +6,7 @@ var app = express();
 // connect to mongo database named "shortly"
 mongoose.connect('mongodb://localhost/shortly');
 
+
 // configure our server with all the middleware and routing
 require('./config/middleware.js')(app, express);
 require('./config/routes.js')(app, express);
